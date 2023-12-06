@@ -23,10 +23,14 @@ export const Container = styled.div`
 
     border: 0;
 
-    &:placeholder {
+    :disabled{
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_900};
+    }
+
+    &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY300};
     }
-  
+ 
   }
   svg {
       margin-left: 16px;
