@@ -33,6 +33,7 @@ export const Brand = styled.div`
     font-size: 24px;
     color: ${({ theme }) => theme.COLORS.ORANGE};
   }
+
 `
 export const Menu = styled.ul`
   grid-area: menu;
