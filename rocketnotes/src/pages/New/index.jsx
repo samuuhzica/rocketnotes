@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import { Link } from 'react-router-dom';
-
 import { useNavigate } from 'react-router-dom';
 
 import { Container, Form } from "./styles";
@@ -27,6 +25,10 @@ export function New(){
   const [newTag, setNewTag] = useState("")
 
   const navigate = useNavigate()
+
+  function handleBack(){
+    navigate(-1)
+  }
 
   function handleAddLink(){
     setLinks(prevState => [...prevState, newLink])
@@ -77,7 +79,10 @@ export function New(){
         <Form>
           <header>
             <h1>Criar Notas</h1>
-            <ButtonText title="Voltar" />
+            <ButtonText 
+            title="Voltar"
+            onClick={handleBack}
+           />
           </header>
           <Input 
           placeholder="Título"
